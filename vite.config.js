@@ -6,7 +6,7 @@ import vue from '@vitejs/plugin-vue'
 import vueDocsPlugin from './src/plugins/vue-docs-plugin'
 
 // see https://github.com/vitejs/vite/issues/1579
-import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,18 +18,17 @@ export default defineConfig({
   optimizeDeps: {
     esbuildOptions: {
       minifyIdentifiers: false,
-      keepNames: true,
-    },
+      keepNames: true
+    }
   },
-  plugins: [
-    vue(),
-    vueDocsPlugin,
-    cssInjectedByJsPlugin()
-  ],
+  plugins: [vue(), vueDocsPlugin, cssInjectedByJsPlugin()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '~bootstrap': resolve(__dirname , 'node_modules/bootstrap')
+      '~bootstrap': resolve(__dirname, 'node_modules/bootstrap')
     }
+  },
+  build: {
+    outDir: './app/resources/dist'
   }
 })
