@@ -5,6 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
+    "start": "electron-forge start",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -12,25 +13,40 @@
     "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
     "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+<<<<<<< HEAD
     "format": "prettier --write src/"
+=======
+    "format": "prettier --write src/",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+>>>>>>> parent of a9f8f44 (Update)
   },
   "dependencies": {
     "@openclinical/proformajs-vue3-perform": "^0.0.6",
+    "electron-squirrel-startup": "^1.0.0",
     "pinia": "^2.0.35",
     "vue": "^3.2.47"
   },
   "devDependencies": {
+    "@electron-forge/cli": "^6.1.1",
+    "@electron-forge/maker-deb": "^6.1.1",
+    "@electron-forge/maker-rpm": "^6.1.1",
+    "@electron-forge/maker-squirrel": "^6.1.1",
+    "@electron-forge/maker-zip": "^6.1.1",
+    "@electron-forge/plugin-vite": "^6.1.1",
     "@rushstack/eslint-patch": "^1.2.0",
     "@vitejs/plugin-vue": "^4.2.1",
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/test-utils": "^2.3.2",
     "cypress": "^12.11.0",
+    "electron": "^24.3.0",
     "eslint": "^8.39.0",
     "eslint-plugin-cypress": "^2.13.3",
     "eslint-plugin-vue": "^9.11.0",
     "jsdom": "^22.0.0",
     "prettier": "^2.8.8",
     "sass": "^1.62.1",
+    "start-server-and-test": "^2.0.0",
     "vite": "^4.3.4",
     "vite-plugin-css-injected-by-js": "^3.1.0",
     "vitest": "^0.31.0"
