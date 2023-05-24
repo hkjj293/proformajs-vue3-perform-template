@@ -1,6 +1,4 @@
-# proformajs-vue3-perform-desktop-standalone-electron
-
-An example usage of proformajs-vue3-perform using [Electron](https://www.electronjs.org/)
+# proformajs-vue3-perform-template
 
 This repo uses [npm workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces)
 to create two npm libraries:
@@ -54,18 +52,8 @@ npm install
 npm run build
 ```
 
-## Debug standalone application using [Electron](https://www.electronjs.org/)
+## Debug and dev
 
 ```sh
-npm start
+npm run dev
 ```
-
-## Package and distribution using [Electron Forge](https://www.electronforge.io/)
-
-1. Create distrubtion using make command.
-
-```sh
-npm run make
-```
-
-2. The executables should be output to `out` folder under the root folder of the project.
